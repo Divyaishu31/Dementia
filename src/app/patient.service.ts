@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
+  //This can be either mentioned here or can e mentioned under provider as PatientService in app.module.ts
 })
 export class PatientService {
 
