@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  //trial 
 
   public patients: Patient[];
 
@@ -23,8 +24,9 @@ export class AppComponent implements OnInit {
 
   public getPatients(): void {
     this.patientService.getAllPatientInQ().subscribe(
-      (response: Patient[]) => {
-        this.patients = response;
+      ///////(response: Patient[]) => {
+        (response: any) => {
+        this.patients = response.data;
         console.log(this.patients);
       },
       (error: HttpErrorResponse) => {
