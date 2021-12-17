@@ -10,7 +10,7 @@ export class AuthInterceptor implements HttpInterceptor {
       setHeaders: {
         'Content-Type' : 'application/json; charset=utf-8',
         'Accept'       : 'application/json',
-        'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE2Mzk0MTczNzUsImlhdCI6MTYzOTM5OTM3NX0.WFCvSRnlrPTk8pm_DFccmGVVxKohvnE_jcF8fFArHTE5J1jj87h46VOT94Il8iA2TWu4ar4arcn_vQ6xpmJ8ag'
+        'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE2Mzk3NTg1MDMsImlhdCI6MTYzOTc0MDUwM30.KoUFisDVDZQNrk1OiS94vMb3K3qzgyJlIGm34C2fJl8rQsqAtbLsNuV0vH-eH0aYWz6mVK4BtxqKzYUOPpuvAQ'
       },
     });
 
