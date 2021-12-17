@@ -13,6 +13,8 @@ export class AppComponent implements OnInit {
   //trial 
 
   public patients: Patient[];
+  public editPatient: Patient;
+  public deletePatient: Patient;
 
   title = 'Dementia-FrontEnd-Doctor';
 
@@ -78,6 +80,27 @@ export class AppComponent implements OnInit {
     if (results.length === 0 || !key) {
       this.getPatients();
     }
+  }
+
+  public onOpenModal(patient: Patient, mode: string): void {
+    const container = document.getElementById('main-container');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.style.display = 'none';
+    button.setAttribute('data-toggle', 'modal');
+    if (mode === 'add') {
+      button.setAttribute('data-target', '#addPatientModal');
+    }
+    if (mode === 'edit') {
+      this.editPatient = patient;
+      button.setAttribute('data-target', '#updatePatientModal');
+    }
+    if (mode === 'delete') {
+      this.deletePatient = patient;
+      button.setAttribute('data-target', '#deletePatientModal');
+    }
+    container.appendChild(button);
+    button.click();
   }
 
 }

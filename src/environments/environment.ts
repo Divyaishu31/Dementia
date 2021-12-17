@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: '/dementia/DOC'
+  apiBaseUrl: 'http://localhost:8081/dementiaDOC/'
 };
 
 /*

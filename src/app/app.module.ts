@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PatientService } from './patient.service';
-import { AuthInterceptor } from './auth.interceptor';
+import { FormsModule }   from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -12,13 +13,10 @@ import { AuthInterceptor } from './auth.interceptor';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [PatientService,{
-    provide : HTTP_INTERCEPTORS,
-    useClass: AuthInterceptor,
-    multi   : true,
-  }],
+  providers: [PatientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

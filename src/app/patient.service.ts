@@ -19,7 +19,7 @@ export class PatientService {
   // }
 
   public getPatientByUHID(uhid: string) {
-    return this.http.get<Patient>(`${this.apiServerUrl}getPatientByUHID/${uhid}`);
+    return this.http.get<Patient>(`${this.apiServerUrl}/getPatientByUHID/${uhid}`);
   }
 
   // public addEmployee(employee: Employee): Observable<Employee> {
@@ -43,9 +43,7 @@ export class PatientService {
   // }
 
   public getAllPatientInQ() {
-    var patients = this.http.get<Patient[]>(`${this.apiServerUrl}/getAllPatientInQ`);
-    console.log(patients);
-    return patients;
+    return this.http.get<Patient[]>(`${this.apiServerUrl}/getAllPatientInQ`);
   }
 
   public getPatientDemographic(pid: string) {
